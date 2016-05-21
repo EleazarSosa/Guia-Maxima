@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+
+<head>
+
+    <title>Guía Maxima</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/icons.css"/>
+    <link rel="stylesheet" type="text/css" href="css/af.ui.css"/>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" charset="utf-8" src="js/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/fastclick.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/appframework.ui.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+    
+
+</head>
+
+<body>
+
+    <div id="splashscreen" class='ui-loader heavy'>
+        Guía Maxima - Cargando Inicio
+        <br>
+        <br>
+        <span class='ui-icon ui-icon-loading spin'></span>
+        <h1>Iniciando...</h1>
+    </div>
+
+    <div class="view" id="mainview">
+        <header>
+            <h1>Cargando Inicio De Sesión</h1>
+        </header>
+
+        <div class="pages">
+
+            <!-- Vista Bienvenida -->
+            <div class="panel" data-title="Bienvenido" id="page1" data-header="none" data-footer="none" selected="true" style="background: #F7A888;">
+                <div style="text-align:center">
+                    <br>
+                    <br>
+                    <img src="img/logoPrueba.png">
+                    <br>
+                    <br>
+                </div>
+                <ul class="list inset">
+                    <li><a href="#iniciarsesion" class="icon user" style="text-align:center;">Iniciar Sesión</a></li>
+                    <li><a href="#registrarse" class="icon pencil" style="text-align:center;">Registrarme</a></li>
+                </ul>
+            </div>
+            <!-- // Vista Bienvenida // -->
+
+            <!-- Vista Iniciar Sesión -->
+            <div class="panel" data-title="Inicia Sesión" id="iniciarsesion" data-footer="none" style="background: #F7A888;">
+                <div style="text-align:center">
+                    <br>
+                    <br>
+                    <img src="img/candado.png" style="width: 100px; height: 100px;">
+                    <br>
+                    <br>
+                </div>
+                <form id="formIniciar" method="post">
+                    <input name="correo" id="correoSesion" type="text" placeholder="Correo Electrónico" required />
+                    <input name="password" id="passowordSesion" type="password" placeholder="Contraseña" required />
+                    <center><input type="submit" value="Iniciar Sesión" style="width: 100px; height: 30px;"></center>
+                    <div style="text-align:center">
+                        <br>
+                        <a href="#" id="recuperarpass">¿Has olvidado tu contraseña?</a>
+                    </div>
+                </form>
+            </div>
+            <!-- // Vista Iniciar Sesion // -->
+
+            <!-- Vista Registrarse -->
+            <div class="panel" data-title="Registrate" id="registrarse" data-footer="none" style="background: #F7A888;">
+                <div style="text-align:center">
+                    <br>
+                    <br>
+                    <img src="img/contact.png" style="width: 100px; height: 100px;">
+                    <br>
+                    <br>
+                </div>
+                <form id="formRegistrar" method="post">
+                    <input name="nombre" type="text" placeholder="Nombre Completo" id="nombre" required/>
+                    <input name="correo" type="email" placeholder="Correo Electrónico" id="correo" required/>
+                    <input name="password" type="password" placeholder="Contraseña" id="password" required pattern=".{5,10}" title="5 a 10 caracteres" />
+                    <center><input type="submit" value="Registrarme" style="width: 100px; height: 30px;"></center>
+                    <!--<li><a href="#seleccion" class="icon user" style="text-align:center">Prueba</a></li>-->
+                </form>
+            </div>
+            <!-- // Vista Registrarse // -->
+
+            <!-- Vista helado Bebida -->
+            <div class="panel" data-title="¿Helado o Bebida?" id="seleccion" data-footer="none" style="background: #F7A888;">
+                <br>
+                <br>
+                <br>
+                <br>
+                <center>
+                    <table>
+                        <tr>
+                            <td><a href="#" id="consultaHelado"><img src="img/helado.png"></a></td> 
+                            <td><a href="#sabores"><img src="img/bebida.png" style="width: 180px; height: 200px;"></a></td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+            <!-- // Vista helado bebida -->
+
+            <!-- Vista sabores -->
+            <div class="panel" data-title="Elije los sabores" id="sabores" data-footer="none" style="background: #F7A888;">
+            <center>
+                <table id="tabla" border="1px solid black">
+                    <tr>
+                        <th>ID</th>
+                        <th>sabor</th>
+                        <th>elejir</th>
+                    </tr>
+                </table>
+            </center>
+            </div>
+            <!-- // Vista sabores -->
+        </div>
+    </div>
+
+</body>
+
+</html>
